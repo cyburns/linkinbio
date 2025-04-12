@@ -2,7 +2,7 @@ import { FormMessage, Message } from "@/components/form/form-message";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Link from "next/link";
-import { signUpAction } from "@/app/(app)/actions";
+import { signUpAction } from "@/app/actions";
 import { Button } from "@/components/ui/button";
 import { ThemeSwitch } from "@/components/theme/theme-switch";
 
@@ -19,8 +19,7 @@ export default async function Signup(props: {
   }
 
   return (
-    <>
-      <ThemeSwitch />
+    <div className="flex justify-center items-center w-screen h-screen">
       <form className="flex flex-col min-w-64 max-w-64 mx-auto">
         <h1 className="text-2xl font-medium">Sign up</h1>
         <p className="text-sm text text-foreground">
@@ -44,6 +43,6 @@ export default async function Signup(props: {
           <FormMessage message={searchParams} />
         </div>
       </form>
-    </>
+    </div>
   );
 }
