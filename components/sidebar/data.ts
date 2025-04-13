@@ -86,11 +86,11 @@ export const sidebarData: SidebarData = {
           items: [
             {
               title: "Sign In",
-              url: "/sign-in" as any,
+              url: "/sign-up" as any,
             },
             {
               title: "Sign In (2 Col)",
-              url: "/sign-in-2" as any,
+              url: "/sign-up-2" as any,
             },
             {
               title: "Sign Up",

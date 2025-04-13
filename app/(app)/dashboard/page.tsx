@@ -12,8 +12,8 @@ import {
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Main } from "@/components/layout/main";
-import { ThemeSwitch } from "@/components/theme/theme-switch";
 import { Header } from "@/components/layout/header";
+import { ProfileDropdown } from "@/components/layout/profile-dropdown";
 
 const page = async () => {
   const supabase = await createClient();
@@ -23,7 +23,7 @@ const page = async () => {
   } = await supabase.auth.getUser();
 
   if (!user) {
-    return redirect("/sign-in");
+    return redirect("/sign-up");
   }
 
   return <Dashboard />;
@@ -33,9 +33,7 @@ function Dashboard() {
   return (
     <>
       <Header>
-        <div className="ml-auto flex items-center space-x-4">
-          <ThemeSwitch />
-        </div>
+        <ProfileDropdown />
       </Header>
 
       <Main>
